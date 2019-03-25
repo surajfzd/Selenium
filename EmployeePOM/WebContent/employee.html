@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            employee first step
+        </title>
+        
+        <style>
+            h1:hover{
+                color: #498af2;
+                border: 1px dashed #498af2;
+                background-color: #f7f7f7;
+            }
+            #fname{
+                height: 18px;
+                width: 150px;
+                border-radius:5px 5px 5px 5px;
+                border-style:solid;
+                border-color: gray;
+            }
+            #fname:hover{
+                height: 18px;
+                width: 150px;
+                border-radius:5px 5px 5px 5px;
+                border-style:solid;
+                border-color:red;
+            }
+                       
+             #salary:hover{
+                height: 18px;
+                width: 150px;
+                border-radius:5px 5px 5px 5px;
+                border-style:solid;
+                border-color: red;
+            }
+            #gender{
+                 height: 25px;
+                 width: 310px;
+                 border-radius:5px 5px 5px 5px;
+                 border-style:solid;
+                 border-color: gray;
+                
+            }
+            #gender:hover{
+                 height: 25px;
+                 width: 310px;
+                 border-radius:5px 5px 5px 5px;
+                 border-style:solid;
+                 border-color: red;
+                
+            }
+            #mobile{
+                 height: 18px;
+                 width: 310px;
+                 border-radius:5px 5px 5px 5px;
+                 border-style:solid;
+                 border-color: gray;
+            }
+            #location{
+                 height: 18px;
+                 width: 310px;
+                 border-radius:5px 5px 5px 5px;
+                 border-style:solid;
+                 border-color: gray;
+            }
+            #next{
+                width:100px;
+                height: 30px;
+                margin-left: 110px;
+                background:#498af2;
+                font-family:verdana;
+                font-size:14px;
+                color:white;
+                border-radius:5px 5px 5px 5px;
+                border-width: 1px;
+                border-style:solid;
+                border-color: gray;
+                cursor:pointer;
+                outline:none;   
+            }
+            #next:hover{
+                width:100px;
+                height: 30px;
+                margin-left: 110px;
+                background:#498af2;
+                font-family:verdana;
+                font-size:16px;
+                color:white;
+                border-radius:5px 5px 5px 5px;
+                border-width: 2px;
+                border-style:solid;
+                border-color: red;
+            }
+            #text_area{
+                height: 40px;
+                width: 300px;
+                border-radius:5px 5px 5px 5px;
+                border-style:solid;
+                border-color: gray;
+                overflow-y: scroll;
+            }
+             #text_area:hover{
+                height: 40px;
+                width: 300px;
+                border-radius:5px 5px 5px 5px;
+                border-style:solid;
+                border-color: red;
+                overflow-y: scroll;
+                 border-width: 2px;
+            }
+            #div1{
+                width: 22%; 
+                height: 100%; 
+                margin-left: 37%;  
+                background-color: #f7f7f7; 
+                position:relative; 
+                padding: 30px; 
+                border-style: solid;
+                border-color: black;
+                
+            }
+             #div1:hover{
+                width: 22%; 
+                height: 100%; 
+                margin-left: 37%;  
+                background-color: #f7f7f7; 
+                position:relative; 
+                padding: 30px; 
+                border-style: solid;
+                border-color: #498af2;
+                 
+            }
+        
+        </style>
+        
+        <script>
+            function valid(){
+                /*
+                    validation on Title.
+                */
+              
+                var firstName = document.getElementById("fname").value;
+                if(firstName.length == 0){
+                    alert("name can't be blank");
+                    return;
+                }
+            }
+        
+        </script>
+    </head>
+    
+    <body>
+        <div style=" margin-top:15px; height: 10%; width: 20%;margin-left: 40%; align-content: center; position: static;">
+            <h1 align = "center">Employee Details</h1>
+        </div>
+        <div id = "div1">
+       
+            <form action="nextstep.html" method="post">
+            
+                EmpNo:<input type = "text" name = "empid" id = "" placeholder="employee id"><br><br>
+                Name:<input id="fname" type="text" name="name" placeholder="Name" required><br><br>
+                state:<input type="text" name = "state" id =""><br> <br>
+                city: <select name = "city">
+                                <option value="none">Select city</option>
+                                <option value="pune">pune</option>
+                                <option value="mumbai">mumbai</option>
+                            </select><br><br>
+                <input type = "submit" value = "Next Step" onclick = "valid()" >
+                           
+                <p id="demo"></p>
+                
+            </form>
+            
+        </div>
+    
+    </body>
+</html>
